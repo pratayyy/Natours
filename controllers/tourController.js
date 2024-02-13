@@ -5,7 +5,13 @@ exports.getAllTours = async (req, res) => {
   try {
     // const tours = await Tour.find({ duration: '5', difficulty: 'easy' });
 
-    // 1) BUILD QUERY
+    // const query = await Tour.find()
+    //   .where('duration')
+    //   .equals('5')
+    //   .where('difficulty')
+    //   .equals('easy');
+
+    // BUILD QUERY
     // 1A) Filtering
     const queryObj = { ...req.query };
     const excludedFields = ['page', 'sort', 'limit', 'fields'];
@@ -19,18 +25,21 @@ exports.getAllTours = async (req, res) => {
     let queryStr = JSON.stringify(queryObj);
     queryStr = queryStr.replace(/\b(gte|gt|lte|lt)\b/g, (match) => `$${match}`);
 
-    const query = Tour.find(JSON.parse(queryStr));
+    let query = Tour.find(JSON.parse(queryStr));
 
-    // const query = await Tour.find()
-    //   .where('duration')
-    //   .equals('5')
-    //   .where('difficulty')
-    //   .equals('easy');
+    // 2) Sorting
+    if (req.query.sort) {
+      // sort('price ratingsAverage')
+      const sortBy = req.query.sort.split(',').join(' ');
+      query = query.sort(sortBy);
+    } else {
+      query = query.sort('-createdAt');
+    }
 
-    // 2) EXECUTE QUERY
+    // EXECUTE QUERY
     const tours = await query;
 
-    // 3) SEND RESPONSE
+    // SEND RESPONSE
     res.status(200).json({
       status: 'success',
       results: tours.length,
