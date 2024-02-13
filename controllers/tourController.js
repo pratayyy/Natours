@@ -1,6 +1,13 @@
 /* eslint-disable node/no-unsupported-features/es-syntax */
 const Tour = require('../models/tourModel');
 
+exports.aliasTopTours = (req, res, next) => {
+  req.query.limit = '5';
+  req.query.sort = '-ratingsAverage,price';
+  req.query.fields = 'name,duration,price,ratingsAverage,summary';
+  next();
+};
+
 exports.getAllTours = async (req, res) => {
   try {
     // const tours = await Tour.find({ duration: '5', difficulty: 'easy' });
