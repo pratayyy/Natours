@@ -21,6 +21,11 @@
   box-sizing: inherit;
 }
 
+::-webkit-scrollbar {
+  width: 0px;
+  background: transparent;
+}
+
 html {
   font-size: 62.5%;
   -webkit-box-sizing: border-box;
