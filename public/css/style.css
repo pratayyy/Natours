@@ -1227,6 +1227,7 @@ body {
   margin: 0 auto;
 }
 
+.signup-form,
 .login-form {
   margin: 0 auto;
   max-width: 55rem;
