@@ -12240,26 +12240,23 @@ var bookTour = exports.bookTour = /*#__PURE__*/function () {
           return (0, _axios.default)("http://127.0.0.1:3000/api/v1/bookings/checkout-session/".concat(tourId));
         case 4:
           session = _context.sent;
-          console.log(session);
-
-          // 2) Route to checkout from + charge card
-          _context.next = 8;
+          _context.next = 7;
           return stripe.redirectToCheckout({
             sessionId: session.data.session.id
           });
-        case 8:
-          _context.next = 14;
+        case 7:
+          _context.next = 13;
           break;
-        case 10:
-          _context.prev = 10;
+        case 9:
+          _context.prev = 9;
           _context.t0 = _context["catch"](1);
           console.log(_context.t0);
           (0, _alert.showAlert)('error', _context.t0.message);
-        case 14:
+        case 13:
         case "end":
           return _context.stop();
       }
-    }, _callee, null, [[1, 10]]);
+    }, _callee, null, [[1, 9]]);
   }));
   return function bookTour(_x) {
     return _ref.apply(this, arguments);
