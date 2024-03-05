@@ -3,6 +3,10 @@
   "version": "1.0.0",
   "description": "Touring website api",
   "main": "app.js",
+  "targets": {
+    "main": false
+  },
+  "browserslist": "> 0.5%, last 2 versions, not dead",
   "scripts": {
     "start": "node server.js",
     "dev": "nodemon server.js",
