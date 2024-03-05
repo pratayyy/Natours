@@ -17,13 +17,12 @@ exports.getCheckoutSession = catchAsync(async (req, res, next) => {
       {
         price_data: {
           currency: 'inr',
-          unit_amount: tour.price * 100 * 80, // Shorthand conversion of USD to INR
+          unit_amount: tour.price * 100,
           product_data: {
             name: `${tour.name} Tour`,
             description: tour.summary,
             images: [
-              // `${req.protocol}://${req.get('host')}/img/tours/${tour.imageCover}`,
-              `https://www.natours.dev/img/tours/${tour.imageCover}`,
+              `${req.protocol}://${req.get('host')}/img/tours/${tour.imageCover}`,
             ],
           },
         },
