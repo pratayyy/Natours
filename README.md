@@ -62,23 +62,23 @@
 
 #### Home Page :
 
-
+<img src="https://github.com/pratayyy/Natours/assets/100011863/39b3a05d-ddcb-4c33-83fc-b2f0dedad6da">
 
 #### Tour Details :
 
-
+<img src="https://github.com/pratayyy/Natours/assets/100011863/2bf26325-c526-4faa-8c92-ba670059e34c" width="855">
 
 #### Login and Admin Page :
 
-
+<img src="https://github.com/pratayyy/Natours/assets/100011863/d637e06e-0dea-4ab0-a0f4-f3e79a43b001" width="855">
 
 #### SignUp and User Profile :
 
-
+<img src="https://github.com/pratayyy/Natours/assets/100011863/4a6c277a-6ba8-452f-8a36-0905c3a1bf4a" width="855">
 
 #### Booking process :
 
-
+<img src="https://github.com/pratayyy/Natours/assets/100011863/9f38dfd8-460a-4a95-a47c-6aa77add016d" width="855">
 
 ## How To Use 🤔
 
